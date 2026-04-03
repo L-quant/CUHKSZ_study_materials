@@ -1,0 +1,143 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=0.75in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{array}
+
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Times New Roman}
+\onehalfspacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\captionsetup{font=normalsize}
+\titleformat{\section}{\normalsize\bfseries}{\thesection.}{0.5em}{}
+
+\begin{document}
+
+\begin{center}
+\textbf{FIN3080 Assignment 2}\\
+Student ID: 124090310
+\end{center}
+
+\section{Objective and Main Conclusion}
+
+This report compares the current market episode (2024-09-18 to 2026-03-09) with two historical bull-market episodes: the 2015 episode (2014-06-19 to 2015-06-12) and the 2021 episode (2019-01-04 to 2021-02-18). I calculate the required indicators on trading activity, leverage, fund issuance, valuation, and representative stocks, and then use them to assess the stage of the current market bubble.
+
+My overall judgement is that the current episode is in an \textbf{early-to-mid stage}. Trading volume has already expanded sharply, but leverage and equity-fund issuance remain much weaker than in 2015 and 2021. Valuation indicators have declined from their starting levels, yet they are still not as stretched as in past bubble end points. In other words, speculative enthusiasm is visible, but the current episode does not yet fully resemble the late-stage conditions observed in the historical bubble periods.
+
+\begin{table}[H]
+\centering
+\caption{Participation metrics across episodes}
+\begin{tabular}{ccccc}
+\toprule
+Episode & Trading Ratio & Peak Trading Ratio & Margin Ratio & Fund Ratio \\
+\midrule
+2015 & 11.28 & 13.55 & 5.49 & 40.16 \\
+2021 & 3.27 & 5.23 & 2.23 & 32.55 \\
+Current & 5.31 & 7.83 & 1.93 & 10.74 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Turnover peak and index returns}
+\begin{tabular}{cccc}
+\toprule
+Episode & Peak Date & Return Before Peak & Return After Peak \\
+\midrule
+2015 & 2015-05-28 & 128.30\% & 11.82\% \\
+2021 & 2020-07-07 & 33.02\% & 9.87\% \\
+Current & 2026-01-14 & 51.85\% & -0.71\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The current episode's trading value ratio is above the 2021 episode but still well below the 2015 bubble. The peak trading ratio also suggests that market attention became extremely strong. However, the current margin balance ratio is only 1.93, which is lower than both historical episodes. This means participation has broadened, but leverage expansion remains relatively contained.
+
+\section{Trading, Leverage and Fund Issuance}
+
+The fund-issuance indicator provides additional evidence that the current boom is not yet as crowded as the previous bubbles. The ratio of newly issued equity-oriented fund shares is 10.74 in the current episode, versus 40.16 in 2015 and 32.55 in 2021. The current episode therefore shows much weaker retail and institutional issuance intensity than the two historical benchmark bubbles.
+
+The index performance before and after the turnover peak is also informative. In all three episodes, the SSE Composite rose substantially before trading value reached its peak. However, in the current episode the return after the peak is already slightly negative, while it remained positive in 2015 and 2021. This suggests that the strongest speculative turnover may already have passed temporarily, even though the broader boom has not fully ended.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.80\linewidth]{../code/outputs/figures/current_trend_market_indicators.png}
+\caption{Current-episode trends in trading value, maximum trading value, margin balance, and fund issuance}
+\end{figure}
+
+\section{Valuation Indicators}
+
+ERP falls when equity valuations become more expensive relative to bonds. In the 2015 episode, ERP dropped from 8.12\% to 1.70\%, and its percentile fell from 100.0 to 32.9. In the 2021 episode, ERP dropped from 6.56\% to 2.47\%, with the percentile falling from 89.6 to 28.1. In the current episode, ERP also declined, but only from 7.16\% to 5.26\%, and its percentile is still 67.2. Therefore, although valuation has become less attractive than at the beginning of the current boom, it is not yet as expensive as in the late phase of the 2015 or 2021 episodes.
+
+The same message appears in the dividend-yield spread. The current spread declined from 1.38\% to 0.84\%, but both the start and end percentiles remain at 100.0. Relative to the full historical distribution before 2024, the current market still offers a high dividend-yield spread over the 10-year government bond yield. This is inconsistent with a fully overheated late-stage bubble.
+
+\begin{table}[H]
+\centering
+\caption{ERP comparison across episodes}
+\begin{tabular}{ccccc}
+\toprule
+Episode & ERP Start & ERP End & Start Percentile & End Percentile \\
+\midrule
+2015 & 8.12\% & 1.70\% & 100.0 & 32.9 \\
+2021 & 6.56\% & 2.47\% & 89.6 & 28.1 \\
+Current & 7.16\% & 5.26\% & 95.9 & 67.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Dividend-spread comparison across episodes}
+\begin{tabular}{ccccc}
+\toprule
+Episode & Spread Start & Spread End & Start Percentile & End Percentile \\
+\midrule
+2015 & -1.09\% & -2.08\% & 68.1 & 33.9 \\
+2021 & -0.28\% & -1.53\% & 98.2 & 37.9 \\
+Current & 1.38\% & 0.84\% & 100.0 & 100.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.80\linewidth]{../code/outputs/figures/current_trend_valuation_and_stocks.png}
+\caption{Current-episode trends in ERP, dividend spread, East Money, and Hundsun}
+\end{figure}
+
+\section{Representative Stocks and Final Assessment}
+
+Representative-stock returns confirm that the current episode is speculative, but still milder than the two benchmark bubbles. East Money rose by 103.55\% in the current episode, compared with 625.44\% in 2015 and 194.14\% in 2021. Hundsun rose by 73.87\%, below both 2015 and 2021. Among brokerage stocks, the best performer in the current episode is 002945, with a full-interval return of 79.77\%, which is also far below the best brokerage returns in 2015 and 2021.
+
+\begin{table}[H]
+\centering
+\caption{Representative-stock performance}
+\begin{tabular}{ccccc}
+\toprule
+Episode & East Money & Hundsun & Best Broker Code & Best Broker Return \\
+\midrule
+2015 & 625.44\% & 484.08\% & 600061 & 528.24\% \\
+2021 & 194.14\% & 90.76\% & 601066 & 263.38\% \\
+Current & 103.55\% & 73.87\% & 002945 & 79.77\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.80\linewidth]{../code/outputs/figures/current_trend_stock_comparison.png}
+\caption{Current-episode cumulative returns of East Money, Hundsun, and the best brokerage stock}
+\end{figure}
+
+Putting all indicators together, I conclude that the current episode is best described as \textbf{early-to-mid stage}. Trading activity has been strong, but margin financing, equity-fund issuance, valuation compression, and representative-stock gains are still less extreme than in the historical bubble episodes. At the same time, the slight pullback after the turnover peak suggests the market may already be experiencing some consolidation after its most euphoric phase.
+
+\end{document}
